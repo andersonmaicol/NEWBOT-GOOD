@@ -65,7 +65,7 @@ const starts = async (client = new WAConnection()) => {
   client.logger.level = "warn";
   client.version = [2, 2143, 3];
   client.browserDescription = ["Boss ofc", "Chrome", "3.0"];
-console.log(color(figlet.textSync('Boss ofc', {
+console.log(color(figlet.textSync('Boss-oficial', {
 font: 'Standard',
 horizontalLayout: 'default',
 vertivalLayout: 'default',
@@ -73,12 +73,12 @@ width: 80,
 whitespaceBreak: false
 }), 'cyan'))
 console.log(color(`[ • CREADOR BOSS OFC • ]` ,'cyan'))
-console.log(color(`< ================================================== >`, 'cyan'))
+console.log(color(`< ============================================= >`, 'cyan'))
 console.log(color(`[•]`, 'aqua'), color(`Servidor    : ${ucapanWaktu}`, 'white'))
 console.log(color(`[•]`, 'aqua'), color(`Bot Version : 2.1.2`, 'white'))
 console.log(color(`[•]`, 'aqua'), color(`Estado      : Activo`, 'white'))
 console.log(color(`[•]`, 'aqua'), color(`Dueño       : ${fakeyoi}`, 'white'))
-console.log(color(`< ================================================== >`, 'cyan'))
+console.log(color(`< ============================================= >`, 'cyan'))
 console.log(color(figlet.textSync('NewBot', {
 font: 'Standard',
 horizontalLayout: 'default',
