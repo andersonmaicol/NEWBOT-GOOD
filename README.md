@@ -17,28 +17,8 @@
 
 
 
-## Instalación de comandos para termux 😎
-```bash
-apt update
-apt upgrade
-pkg update && pkg upgrade 
-pkg install hot
-pkg install bash
-pkg install libwebp
-pkg install git -y
-pkg install nodejs -y 
-pkg install ffmpeg -y 
-pkg install wget
-pkg install imagemagick -y
-git clone https://github.com/Boss-oficial/NEWBOT
-cd NEWBOT
-npm install
-npm start
-escanea el código qr en 15 segundos
-```
-
-## Reclutamiento
-Mi WhatsApp👇
+## Preguntás/Reclutamiento
+Aqui abajo te dejo mi WhatsApp personal 😋
 <p align="center">
  <a href="https://wa.me/6283896811444"><img alt="WhatsApp Personal" src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=black"/></a>
 </p>
