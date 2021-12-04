@@ -12,4 +12,4 @@ apt-get install nmap
 wget -O ~/../usr/share/tessdata/ind.traineddata "https://github.com/tesseract-ocr/tessdata/blob/master/ind.traineddata?raw=true"
 npm install
 
-echo "Terminé la instalación de las dependencias, simplemente ejecute npm start"
+echo "Vamos te falta el último comando npm start"

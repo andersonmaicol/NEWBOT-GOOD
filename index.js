@@ -205,10 +205,10 @@ const runtime = function (seconds) {
   var h = Math.floor((seconds % (3600 * 24)) / 3600);
   var m = Math.floor((seconds % 3600) / 60);
   var s = Math.floor(seconds % 60);
-  var dDisplay = d > 0 ? d + (d == 1 ? " dia, " : " Dia, ") : "";
-  var hDisplay = h > 0 ? h + (h == 1 ? " hora, " : " Hora, ") : "";
-  var mDisplay = m > 0 ? m + (m == 1 ? " minuto, " : " Minuto, ") : "";
-  var sDisplay = s > 0 ? s + (s == 1 ? " segundo" : " Segundo") : "";
+  var dDisplay = d > 0 ? d + (d == 1 ? " dia, " : " Dias, ") : "";
+  var hDisplay = h > 0 ? h + (h == 1 ? " hora, " : " Horas, ") : "";
+  var mDisplay = m > 0 ? m + (m == 1 ? " minuto, " : " Minutos, ") : "";
+  var sDisplay = s > 0 ? s + (s == 1 ? " segundo" : " Segundos") : "";
   return dDisplay + hDisplay + mDisplay + sDisplay;
 };
 module.exports = cnf = async (cnf, mek) => {
@@ -246,7 +246,7 @@ if (multi){
 		    var prefix = /^[°zZ#$@*+,.?=''():√%!¢£¥€π¤ΠΦ_&><`™©®Δ^βα¦|/\\©^]/.test(cmd) ? cmd.match(/^[°zZ#$@*+,.?=''():√%¢£¥€π¤ΠΦ_&><!`™©®Δ^βα¦|/\\©^]/gi) : '#'
         } else {
             if (nopref){
-                prefix = 'abcdefghijklnmñopqrstuvwxyzABCDEFGHIJKLNMÑOPQRSTUVWXYZ'
+                prefix = ''
             } else {
                 prefix = prefa
             }
@@ -379,7 +379,7 @@ const daftar1 = `Hola ${pushname}\n\nUsted no esta registrado 🙃`
           {
             buttonId: `verify`,
             buttonText: {
-              displayText: `VERIFY 🦋`,
+              displayText: `🥀VERIFY`,
             },
             type: 1,
           },]
@@ -415,8 +415,8 @@ const timeWib = moment.tz('Asia/Jakarta').format('DD/MM HH:mm:ss')
 cmhit.push(command)
     //MESS
     mess = {
-      wait: "𝐸𝑠𝑝𝑒𝑟𝑒 𝑢𝑛 𝑚𝑖𝑛𝑢𝑡𝑜 𝑝𝑜𝑟 𝑓𝑎𝑣𝑜𝑟 𝑦 𝑠𝑖 𝑑𝑒𝑚𝑜𝑟𝑜 𝑙𝑎𝑟𝑔𝑒𝑠𝑒 🙂🔥︎",
-      success: "Listo...🍃",
+      wait: "*𝐸𝑠𝑝𝑒𝑟𝑒 𝑢𝑛 𝑚𝑖𝑛𝑢𝑡𝑜 𝑝𝑜𝑟 𝑓𝑎𝑣𝑜𝑟 𝑦 𝑠𝑖 𝑑𝑒𝑚𝑜𝑟𝑜 𝑙𝑎𝑟𝑔𝑎𝑡𝑒* 🙂🔥︎",
+      success: "𝐿𝑖𝑠𝑡𝑜 ℎ𝑒𝑟𝑚𝑎𝑛@ 🍁",
       wrongFormat: "𝐹𝑜𝑟𝑚𝑎𝑡𝑜 𝑖𝑛𝑐𝑜𝑟𝑟𝑒𝑐𝑡𝑜, 𝑖𝑛𝑡𝑒𝑛𝑡𝑎𝑙𝑜 𝑑𝑒 𝑛𝑢𝑒𝑣𝑜 𝑒𝑛 𝑒𝑙 𝑚𝑒𝑛𝑢",
       error: {
         stick: "𝐸𝑠𝑡𝑜 𝑛𝑜 𝑒𝑠 𝑢𝑛 𝑠𝑡𝑖𝑐𝑘𝑒𝑟 𝑐𝑡𝑚𝑟 😂",
@@ -1010,7 +1010,7 @@ sendEphemeral: false,
         heheh = ms(Date.now() - waktu);
         cnf.sendMessage(
           mek.key.remoteJid,
-          `@${owner} Actualmente estoy fuera de línea!\n\n*Razón :* ${alasan}\n*Desde:* ${heheh.hours} Horas, ${heheh.minutes} Minutos, ${heheh.seconds} Segundos\n\nIntentelo mas tarde`,
+          `@${owner} Actualmente estoy fuera de línea!\n\n*Razón :* Desconozco la razón\n*Desde:* 17 Horas, 12 Minutos, 5 Segundos\n\nIntentelo mas tarde`,
           MessageType.text,
           {
             contextInfo: {
@@ -1045,7 +1045,7 @@ sendEphemeral: false,
                   heheh = ms(Date.now() - waktu);
                   cnf.sendMessage(
                     mek.key.remoteJid,
-                    `@${owner} Esta Offline!\n\n *Razon :* ${alasan}\n *Desde :* ${heheh.hours} Hora, ${heheh.minutes} Minutos, ${heheh.seconds} Segundos\n\nVuelva a intentar mas tarde`,
+                    `@${owner} Esta Offline!\n\n *Razon :* Desconozco la razón\n *Desde :* 17 Hora, 12 Minutos, 5 Segundos\n\nVuelva a intentar mas tarde`,
                     MessageType.text,
                     {
                       contextInfo: {
@@ -1196,7 +1196,7 @@ await cnf.setStatus(`Bot activado desde ${uptime}`).catch((_) => _);
     if (!mek.key.fromMe && banChats === true) return;
 switch (command) {
 case 'verify':              
-if (isRegistered) return fakegroup('Tu cuenta está verificada')
+if (isRegistered) return fakegroup('*Usted ya se registró* 😑')
 const serialUser = createSerial(18)
 	         try {
 								ppimg = await cnf.getProfilePicture(`${sender.split('@')[0]}@c.us`)
@@ -1216,7 +1216,7 @@ const serialUser = createSerial(18)
 
           *「 𝙽𝙴𝚆 •ც૦੮ 」*`
          haitod = await getBuffer(`http://hadi-api.herokuapp.com/api/card/verify?nama=${encodeURI(pushname)}&member=${_registered.length}&seri=${serialUser}&pp=${ppimg}&bg=${ppimg}`)
-             buttons = [{buttonId: `hidetag yt: boss ofc`,buttonText:{displayText: `MENCION`},type:1}]
+             buttons = [{buttonId: `menu`,buttonText:{displayText: `☃️ 𝐌𝐄𝐍𝐔 ❄️`},type:1}]
               imageMsg = (await cnf.prepareMessageMedia(haitod, "imageMessage", { thumbnail: haitod, })).imageMessage
               buttonsMessage = {footerText:'Boss ofc', imageMessage: imageMsg,
               contentText:`${anuu}`,buttons,headerType:4}
@@ -1457,7 +1457,7 @@ fakegroup(`${mek.quoted.caption}`)
 break
 case 'iggw':
 if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fkontak})
-  fakegroup('𝗜𝗡𝗦𝗧𝗔𝗚𝗥𝗔𝗠\nhttps://www.instagram.com/bossnewbot\n𝗬𝗢𝗨𝗧𝗨𝗕𝗘\nhttps://youtube.com/channel/UCv_ST3RV4JD8j1c34VMAn0Q\n𝑠𝑖𝑔𝑢𝑒𝑚𝑒 𝑦 𝑠𝑢𝑠𝑐𝑟𝑖𝑏𝑒𝑡𝑒 𝑐𝑡𝑚𝑟\n𝙉𝙚𝙬𝘽𝙤𝙩 𝘿𝙤𝙢𝙞𝙣𝙖 🦖\nAceptalo Daniel 😆')
+  fakegroup('   ☃️]|I{•------»𝗜𝗡𝗙𝗢𝗥𝗠𝗔𝗖𝗜𝗢𝗡«------•}I|[❄️\n\n𝗚𝗜𝗧𝗛𝗨𝗕 : https://github.com/Boss-oficial\n𝗬𝗢𝗨𝗧𝗨𝗕𝗘 : https://youtu.be/MqIQBbWCReM\n\nєѕтαѕ ѕση мιѕ яє∂єѕ, єη ƒιη ¢υαℓ۹υιєя αρσуσ ѕєяá ∂є ﻭяαη αуυ∂α\n\n𝐁𝐎𝐒𝐒 𝐎𝐅𝐂')
 break
    
 case 'owner':
@@ -1465,11 +1465,11 @@ case 'owner':
            case 'creador':
            case 'jupiter':             
 if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fkontak})
-               sendKontak(from, `${owner}`, `${fakeyoi}`, '!Sexo!')
+               sendKontak(from, `${owner}`, `${fakeyoi}`, 'Boss Domina')
                await sleep(1000)
                haibg =`Suscríbete a mi canal de *YouTube*`
-               buttons = [{buttonId: `iggw`,buttonText:{displayText: 'YOUTUBE'},type:1},{buttonId:`iggw`,buttonText:{displayText:'INSTAGRAM'},type:1}]
-               buttonsMessage = { contentText: `${haibg}`, footerText: `Redes abajo ctmr sigueme 🍁`, buttons: buttons, headerType: 1 }
+               buttons = [{buttonId: `iggw`,buttonText:{displayText: 'YOUTUBE'},type:1},{buttonId:`menu`,buttonText:{displayText:'MENU'},type:1}]
+               buttonsMessage = { contentText: `${haibg}`, footerText: `Redes abajo sigueme ctmr 🍁`, buttons: buttons, headerType: 1 }
                prep = await cnf.prepareMessageFromContent(from,{buttonsMessage},{})
                cnf.relayWAMessage(prep)
                break     
@@ -1725,7 +1725,7 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
 		damdu = fs.readFileSync(`./sticker/${random}.webp`)
 			cnf.sendMessage(from, damdu, sticker, {quoted: mek})
 			break
-case 'listmenu':
+case 'listmbsenu':
 if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fkontak})
  listMsg = {
  buttonText: '𝕷𝖎𝖘𝖙𝖆 𝖉𝖊 𝖒𝖊𝖓𝖚𝖘...🔓',
@@ -1781,7 +1781,7 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
 }
 cnf.sendMessage(from, listMsg, MessageType.listMessage, {contextInfo: { mentionedJid: [sender]},quoted:ftrol})
 break
-case 'menuowner':
+case 'mtyenuowner':
 menu = `┏━━❏ *DUEÑO* 👼🏻
 ┣❏ ${prefix}off
 ┣❏ ${prefix}on
@@ -1801,7 +1801,7 @@ sendButMessage(from, menu, `𝐵𝑜𝑠𝑠 𝑜𝑓𝑐`, [
             type: 1,
           },]);
 break
-case 'menugrupo':
+case 'menyugrupo':
 menu = `┏━━❏ *GRUPO* 👥
 ┣❏ ${prefix}grupo
 ┣❏ ${prefix}nsfw 1/0
@@ -1825,7 +1825,7 @@ sendButMessage(from, menu, ` 𝐵𝑜𝑠𝑠 𝑜𝑓𝑐`, [
             type: 1,
           },]);
 break
-case 'menudescargas':
+case 'menudejscargas':
 menu = `┏━━❏ *DESCARGAS* ☘️
 ┣❏ ${prefix}play texto (beta)
 ┣❏ ${prefix}video texto(beta)
@@ -1840,7 +1840,7 @@ sendButMessage(from, menu, `𝐵𝑜𝑠𝑠 𝑜𝑓𝑐`, [
             type: 1,
           },]);
 break
-case 'menulogos':
+case 'menuloggos':
 menu = `┏━━❏ *LOGOS/CREADOR* 💎
 ┣❏ ${prefix}emoji
 ┣❏ ${prefix}golden text
@@ -1881,7 +1881,7 @@ sendButMessage(from, menu, ` 𝐵𝑜𝑠𝑠 𝑜𝑓𝑐`, [
             type: 1,
           },]);
 break
-case 'menuconvertidor':
+case 'menguconvertidor':
 menu = `┏━━❏ *CONVERTIDOR* 🦖
 ┣❏ ${prefix}toimg
 ┣❏ ${prefix}tourl
@@ -1972,7 +1972,7 @@ break
 					teks = (args.length > 1) ? body.slice(8).trim() : ''
 					teks += '\n\n'
 					for (let mem of groupMembers) {
-						teks += `ঔৣ͜͡✦ @${mem.jid.split('@')[0]}\n`
+						teks += `️⏤͟͟͞͞ঔৣ͜͡🔱 @${mem.jid.split('@')[0]}\n`
 						members_id.push(mem.jid)
 					}
 					mentions(teks, members_id, true)
@@ -1991,7 +1991,7 @@ break
                    if (args.length < 1) return fakegroup(`[  ×  ] Ejemplo :\n*${prefix}${command} Boss*`)
                    F = body.slice(6)
                    
-                   anu = await getBuffer(`${ApiZeks}/api/wolflogo?apikey=${zeksApikey}&text1=zeeoneofc&text2=${F}`)
+                   anu = await getBuffer(`${ApiZeks}/api/wolflogo?apikey=${zeksApikey}&text1=Boss-oficial&text2=${F}`)
                    cnf.sendMessage(from, anu, image, {thumbnail: Buffer.alloc(0),caption: `Listo`, quoted: mek})
                    break
          case 'tfire':  
@@ -2306,7 +2306,7 @@ case 'linkwa':
         buffergbl = await getBuffer(ppUrl);
         cnf.sendMessage(from, buffergbl, image, {
           quoted: mek,
-          caption: `\`\`\`「 INFO DEL GP 」\`\`\`\n*•> Nombre* : ${groupName}\n*•> Miembros* : ${groupMembers.length}\n*•> Admins* : ${groupAdmins.length}\n*•> Descripción* : \n${groupDesc}`,
+          caption: `\`\`\`「 INFO DEL GP 」\`\`\`\n*•> Nombre* : ${groupName}\n*•> Miembros* : ${groupMembers.length}\n*•> Admins* : ${groupAdmins.length}\n*•> Descripción* : \n\n${groupDesc}`,
         });
         break;
       // Demote Admins
@@ -2369,7 +2369,7 @@ case 'linkwa':
       case "alarma":
         if (!q)
           return fakegroup(
-            `Use :\n${prefix}reminder text/2s\n\nNOTA: \n*s* - segundos\n*m* - minutos\n*h* - horas\n*d* - dias`
+            `Use :\n${prefix}alarma text/2s\n\nNOTA: \n*s* - segundos\n*m* - minutos\n*h* - horas\n*d* - dias`
           );
         teks = body.slice(8);
         const messRemind = teks.split("/")[0];
@@ -2616,7 +2616,7 @@ break
         stopjadibot(reply);
         break;
       case "listbot":
-        let tekss = "「 *LISTA USUARIO NEWBOT* 」\n";
+        let tekss = "「 *LISTA DE USERS* 」\n";
         for (let i of listjadibot) {
           tekss += `*Numero* : ${i.jid.split("@")[0]}
 *Nombre* : ${i.name}
@@ -2628,7 +2628,7 @@ break
 
       //------------------< Funciones que usan botones >-------------------
       
-	case 'chat':
+	case 'chhat':
 			if (args.length < 1) return fakegroup(`Usar ${prefix}chat 598#### | text`)
             var pc = body.slice(6)
             var nomor = pc.split("|")[0];
@@ -2976,7 +2976,7 @@ cnf.sendMessage(from, ini_buf, image, { quoted: mek, thumbnail: fs.readFileSync(
 ┋ *❀્᭄᭳͜͡* 🥀 ${prefix}𝚂𝙴𝚃𝙿𝚁𝙴𝙵𝙸𝚇 #
 ┋ *❀્᭄᭳͜͡* 🥀 ${prefix}𝙼𝙾𝙳𝙾
 ╰╼╼❏ *𝙽𝙴𝚆 •ც૦੮*
-
+${readmore}
 ╭╼╼❏   *𝐆𝐑𝐔𝐏𝐎*
 ┋ *❀્᭄᭳͜͡* 🥀 ${prefix}𝙶𝚁𝚄𝙿𝙾
 ┋ *❀્᭄᭳͜͡* 🥀 ${prefix}𝙽𝚂𝙵𝚆 𝟷/𝟶
@@ -3402,7 +3402,7 @@ cnf.sendMessage(from, anu, text, {quoted: mek})
 break
 case 'xvideo':
 case 'xv': 
-if (!c) return fakegroup('the link?')
+if (!c) return fakegroup('y el link?')
 x = await fetchJson(`https://bx-hunter.herokuapp.com/api/xvideodetail?url=${c}&apikey=${HunterApi}`)
 
 vid = await getBuffer(x.result.files.low)
@@ -3410,11 +3410,11 @@ cnf.sendMessage(from, vid, video, {quoted: mek})
 break
 case 'writelist':
   fakegroup(`Ejemplos :
-  🔥 ${prefix}write Bot activo 24/7
+  🔥 ${prefix}write NewBot
   🔥 ${prefix}folioright NewBot
-  🔥 ${prefix}folioleft Bot by Boss
-  🔥 ${prefix}writedown Boss ofc
-  🔥 ${prefix}writeleft Boss`)
+  🔥 ${prefix}folioleft NewBot
+  🔥 ${prefix}writedown NewBot
+  🔥 ${prefix}writeleft NewBot`)
   break
 case 'folioleft':
 if (!c) return fakegroup('Donde esta el texto??')
@@ -3981,7 +3981,7 @@ buttons = [{buttonId: `pinterest ${q}`,buttonText:{displayText: `𝑆𝑖𝑔�
                 media = Buffer.from(response, "base64");
                 cnf.sendMessage(from, media, image, {
                   quoted: mek,
-                  caption: "𝐵𝑜𝑠𝑠 𝑜𝑓𝑐 🍃",
+                  caption: "𝐴𝑛𝑖𝑚𝑒 𝑒𝑛𝑐𝑜𝑛𝑡𝑟𝑎𝑑𝑜 🍂",
                 });
               })
               .catch((error) => {
@@ -4013,7 +4013,7 @@ case 'waifu':
               cnf.relayWAMessage(prep)
               fs.unlinkSync(`./${sender}.jpeg`)
               break
-   case'songlyrics':
+   case'sonidoxd':
      
   apa3 = await fetchJson(`https://bx-hunter.herokuapp.com/api/music/liriklagu?query=${args[0]}&apikey=${HunterApi}`,{method:'get'})
   apa2 = apa3.result
@@ -4081,7 +4081,7 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
           .message.extendedTextMessage.contextInfo;
         media = await cnf.downloadAndSaveMediaMessage(encmedia);
         anu = args.join(" ").split("|");
-        satu = anu[0] !== "" ? anu[0] : `Boss`;
+        satu = anu[0] !== "" ? anu[0] : `New`;
         dua = typeof anu[1] !== "undefined" ? anu[1] : `Bot`;
         require("./lib/fetcher.js").createExif(satu, dua);
         require("./lib/fetcher.js").modStick(media, cnf, mek, from);
@@ -4220,7 +4220,7 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
         ran = getRandom(".png");
         exec(`ffmpeg -i ${media} ${ran}`, (err) => {
           fs.unlinkSync(media);
-          if (err) return fakegroup("Bueno, falló, inténtalo de nuevo 🦖");
+          if (err) return fakegroup("*Gif, No gil* 😑");
           buffer = fs.readFileSync(ran);
           fakethumb(buffer, `Listo ${pushname}`);
           fs.unlinkSync(ran);
@@ -4550,7 +4550,7 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
           fakegroup("Envia Foto/Video");
         }
         break;
-      case "inspect":
+      case "inspeccionar":
         try {
           if (!isUrl(args[0]) && !args[0].includes("whatsapp.com"))
             return fakegroup(mess.Iv);
@@ -4667,8 +4667,8 @@ cnf.sendMessage(from, stdout, text, term)
     if (isGroup && budy != undefined) {
     } else {
       console.log(
-        color("Boss ofc", "red"),
-        "Boss ofc",
+        color("Youtube", "red"),
+        "Boss-oficial",
         color(sender.split("@")[0])
       );
     }

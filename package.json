@@ -1,7 +1,7 @@
 {
-  "name": "ConfuBot",
+  "name": "Boss-oficial",
   "version": "1.0.0",
-  "description": "ConfuMods",
+  "description": "Boss-oficial",
   "main": "main.js",
   "directories": {
     "lib": "lib"
