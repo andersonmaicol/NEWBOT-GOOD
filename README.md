@@ -20,7 +20,7 @@
 ## Preguntás/Reclutamiento
 Aqui abajo te dejo mi WhatsApp personal 😋
 <p align="center">
- <a href="https://wa.me/6283896811444"><img alt="WhatsApp Personal" src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=black"/></a>
+ <a href="https://wa.me/5493814668151"><img alt="WhatsApp Personal" src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=black"/></a>
 </p>
 
 * [`Mi Canal de Youtube`](https://youtube.com/channel/UC3wEXnYH07Fr6IdBMQRv0Eg)
